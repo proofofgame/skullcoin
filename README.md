@@ -1,1 +1,1 @@
-# skullcoin
+# Skullcoin: Treasure Island
