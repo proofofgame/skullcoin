@@ -11,7 +11,6 @@
 ;; Variables
 (define-data-var token-uri (optional (string-utf8 256)) none)
 
-
 (define-public (transfer (amount uint) (sender principal) (recipient principal) (memo (optional (buff 34))))
     (if (is-eq tx-sender sender)
         (begin
