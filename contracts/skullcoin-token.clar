@@ -1,4 +1,4 @@
-(impl-trait .ft-trait.sip-010-trait)
+;; (impl-trait .ft-trait.sip-010-trait)
 
 (define-fungible-token SKUL u2000000000000000)
 
