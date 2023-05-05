@@ -5,17 +5,25 @@ authors = []
 telemetry = true
 cache_dir = '.\.cache'
 requirements = []
-
-[contracts.skullcoin-token]
-path = 'contracts/skullcoin-token.clar'
-clarity_version = 1
-epoch = 2.0
-
 [contracts.sip-010-trait]
 path = 'contracts/sip-010-trait.clar'
 clarity_version = 1
 epoch = 2.0
 
+[contracts.skullcoin-souls-nft]
+path = 'contracts/skullcoin-souls-nft.clar'
+clarity_version = 1
+epoch = 2.0
+
+[contracts.skullcoin-souls-nft-mint]
+path = 'contracts/skullcoin-souls-nft-mint.clar'
+clarity_version = 1
+epoch = 2.0
+
+[contracts.skullcoin-token]
+path = 'contracts/skullcoin-token.clar'
+clarity_version = 1
+epoch = 2.0
 [repl.analysis]
 passes = ['check_checker']
 
