@@ -1,5 +1,5 @@
 ;; Traits
-;; (impl-trait 'SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9.nft-trait.nft-trait)
+(impl-trait 'SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9.nft-trait.nft-trait)
 (use-trait commission-trait .commission-trait.commission)
 
 ;; Define NFT token
@@ -10,9 +10,9 @@
 (define-map market uint {price: uint, commission: principal})
 (define-map mint-address bool principal)
 
-;; Constats and Errors
+;; Constants and Errors
 (define-constant CONTRACT-OWNER tx-sender)
-(define-constant WALLET 'ST3PN8051V6E8TRR0ZWEA8RXJFGGWGB6HFQQE4C8W)
+(define-constant WALLET 'SP224YKZ55F25SBYVR8HZXQ7G89CC8WYKAGMZHQ0A)
 (define-constant ERR-SOLD-OUT (err u200))
 (define-constant ERR-WRONG-COMMISSION (err u201))
 (define-constant ERR-NOT-AUTHORIZED (err u202))
@@ -28,7 +28,7 @@
 (define-data-var mint-price uint u0)
 (define-data-var mintpass-sale-active bool false)
 (define-data-var metadata-frozen bool false)
-(define-data-var base-uri (string-ascii 80) "ipfs://CID/")
+(define-data-var base-uri (string-ascii 80) "ipfs://QmVNsUvt9osem2R8T8PuXXZu4hsUBRHndHFA38VX4dpWWd/")
 
 ;; Get balance
 (define-read-only (get-balance (account principal))
@@ -106,6 +106,8 @@
               (map-insert mint-address true tx-sender))
                 ERR-MINT-ALREADY-SET)
     (ok tx-sender)))
+
+;; U2FsdGVkX1+OyqzoAhgrAM+CG53VlXSygOGlx/g0ifrOi47xgS7r7lPbwi23lsri
 
 ;; Mint new NFT (called from mint contract)
 (define-public (mint (new-owner principal))
